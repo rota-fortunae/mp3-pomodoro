@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://csv8w68ys6y8b"]
+
+[ext_resource type="Texture2D" uid="uid://bwtdmxpq3eqbk" path="res://assets/main_body.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dal34mo56d841" path="res://assets/cap.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dvbcar24urv2l" path="res://assets/button_unpressed.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://7mw4quokacc" path="res://assets/button_pressed.png" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://nxwgn6svru8q" path="res://scripts/window_swing.gd" id="5_272bh"]
+[ext_resource type="BitMap" uid="uid://bt0ois64521xf" path="res://assets/button_bitmap.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bjm3qdtqussm7" path="res://assets/charm.png" id="6_7mycd"]
+[ext_resource type="FontFile" uid="uid://obww1jk45dny" path="res://assets/digital-7 (mono).ttf" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://bqya2vw4ijq66" path="res://scripts/pomodoro.gd" id="9_pom"]
+[ext_resource type="Texture2D" uid="uid://b8xe3472y5dco" path="res://assets/break_time.png" id="10_efxa6"]
+[ext_resource type="Texture2D" uid="uid://cr2nnkassuup8" path="res://assets/work_time.png" id="11_dg77c"]
+[ext_resource type="Script" uid="uid://ormykse11xyo" path="res://drag_screen.gd" id="12_dg77c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxrmi"]
+size = Vector2(1.9999847, 120.24368)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ip871"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vw27"]
+radius = 33.007843
+height = 66.015686
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j343n"]
+size = Vector2(98, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycdy4"]
+atlas = ExtResource("10_efxa6")
+region = Rect2(0, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("10_efxa6")
+region = Rect2(30, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
+atlas = ExtResource("10_efxa6")
+region = Rect2(60, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cqfq"]
+atlas = ExtResource("10_efxa6")
+region = Rect2(90, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
+atlas = ExtResource("11_dg77c")
+region = Rect2(0, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaehf"]
+atlas = ExtResource("11_dg77c")
+region = Rect2(30, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_074og"]
+atlas = ExtResource("11_dg77c")
+region = Rect2(60, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cegan"]
+atlas = ExtResource("11_dg77c")
+region = Rect2(90, 0, 30, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ip871"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_ycdy4")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_w48qg")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_vivmo")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_2cqfq")
+}],
+"loop": 1,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_dg77c")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_yaehf")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_074og")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_cegan")
+}],
+"loop": 1,
+"name": &"work",
+"speed": 5.0
+}]
+
+[node name="main" type="Node2D" unique_id=650135755]
+
+[node name="Control" type="Control" parent="." unique_id=1547425364]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_dg77c")
+
+[node name="Node" type="Node" parent="." unique_id=739338244]
+script = ExtResource("5_272bh")
+strength = 1.0
+
+[node name="Charm" type="RigidBody2D" parent="." unique_id=484463194]
+position = Vector2(170, 78.99999)
+rotation = 0.65235966
+
+[node name="Sprite2D" type="Sprite2D" parent="Charm" unique_id=586687799]
+position = Vector2(37.000004, -13.000002)
+rotation = -0.65927607
+texture = ExtResource("6_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Charm" unique_id=978954045]
+position = Vector2(38.223038, -11.423344)
+rotation = -0.6574953
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_hxrmi")
+
+[node name="fullbody" type="Sprite2D" parent="." unique_id=1394310647]
+position = Vector2(95, 33)
+texture = ExtResource("1_ig7tw")
+offset = Vector2(0, 0.5)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=645797071]
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 35.0
+offset_bottom = 41.0
+action_mode = 0
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_ip871")
+texture_normal = ExtResource("3_1bvp3")
+texture_pressed = ExtResource("4_lquwl")
+texture_hover = ExtResource("3_1bvp3")
+texture_disabled = ExtResource("3_1bvp3")
+texture_focused = ExtResource("3_1bvp3")
+texture_click_mask = ExtResource("5_lquwl")
+
+[node name="Cap" type="StaticBody2D" parent="." unique_id=2060485426]
+physics_material_override = SubResource("PhysicsMaterial_ip871")
+
+[node name="cap" type="Sprite2D" parent="Cap" unique_id=1388584460]
+position = Vector2(179, 32)
+texture = ExtResource("2_0xm2m")
+offset = Vector2(0, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cap" unique_id=1921057021]
+visible = false
+position = Vector2(169, 33)
+rotation = 1.5437044
+shape = SubResource("CapsuleShape2D_5vw27")
+
+[node name="Pivot" type="PinJoint2D" parent="." unique_id=590999161]
+position = Vector2(207, 33)
+node_a = NodePath("../Cap")
+node_b = NodePath("../Charm")
+
+[node name="SwingBoundary" type="StaticBody2D" parent="." unique_id=1341193640]
+visible = false
+position = Vector2(205, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwingBoundary" unique_id=810342164]
+position = Vector2(-2, 29)
+shape = SubResource("RectangleShape2D_j343n")
+
+[node name="Clock" type="Label" parent="." unique_id=1104957864]
+offset_left = 55.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.95686275, 0.76862746, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("8_5vw27")
+theme_override_font_sizes/font_size = 28
+text = "30:00"
+
+[node name="Timer" type="Timer" parent="." unique_id=1686455308]
+
+[node name="Pomodoro" type="Node" parent="." unique_id=222222333]
+script = ExtResource("9_pom")
+break_minutes = 1
+debug = false
+
+[node name="BreakIndicator" type="AnimatedSprite2D" parent="." unique_id=1957707449]
+position = Vector2(143, 32)
+sprite_frames = SubResource("SpriteFrames_ip871")
+animation = &"break"
+frame_progress = 0.5452832
