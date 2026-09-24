@@ -12,8 +12,9 @@ config_version=5
 
 config/name="mp3_pomodoro"
 run/main_scene="res://main.tscn"
+config/disable_project_settings_override=true
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+config/icon="uid://dvbcar24urv2l"
 
 [display]
 
@@ -25,7 +26,6 @@ window/size/window_width_override=1536
 window/size/window_height_override=640
 window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 window/per_pixel_transparency/allowed=true
 
 [physics]
@@ -38,4 +38,5 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 viewport/transparent_background=true

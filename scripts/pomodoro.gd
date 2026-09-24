@@ -23,8 +23,8 @@ func _ready() -> void:
 			_break_indicator = p.get_node("BreakIndicator")
 		else:
 			if debug: print("Pomodoro: BreakIndicator not found")
-		if p.has_node("TextureButton"):
-			_button = p.get_node("TextureButton")
+		if p.has_node("RoundButton"):
+			_button = p.get_node("RoundButton")
 			_button.connect("pressed", Callable(self, "_on_pomo_button_pressed"))
 		else:
 			if debug: print("Pomodoro: TextureButton not found")

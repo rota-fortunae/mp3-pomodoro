@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 
 	if _target and not is_zero_approx(dx):
 		#print("Window moved! dx = ", dx)
-		var impulse := Vector2(-dx * strength, 0)
+		var impulse := Vector2(-dx * strength*_delta, 0)
 		_target.apply_impulse(impulse)
 		
 	_prev_window_pos = current_win_pos

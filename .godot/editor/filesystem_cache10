@@ -1,0 +1,24 @@
+9cad1ddce9e5a63143ba340c9520626b
+::res://::1790262241
+deletelater.gd::GDScript::5953927292731074349::1788314837::0::1::::<>Node<><>0<>0<><>::
+drag_screen.gd::GDScript::1018510248975901322::1788195932::0::1::::<>Control<><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1789428041::0::1::::<><><>0<>0<><>::
+main.tscn::PackedScene::6081637114251393051::1788447143::0::1::::<><><>0<>0<><>::uid://bwtdmxpq3eqbk::::res://assets/main_body.png<>uid://dal34mo56d841::::res://assets/cap.png<>uid://dvbcar24urv2l::::res://assets/button_unpressed.png<>uid://7mw4quokacc::::res://assets/button_pressed.png<>uid://nxwgn6svru8q::::res://scripts/window_swing.gd<>uid://bt0ois64521xf::::res://assets/button_bitmap.png<>uid://bjm3qdtqussm7::::res://assets/charm.png<>uid://dwl5ec7jpd6w5::::res://assets/cap_bitmask.png<>uid://obww1jk45dny::::res://assets/digital-7 (mono).ttf<>uid://bqya2vw4ijq66::::res://scripts/pomodoro.gd<>uid://b8xe3472y5dco::::res://assets/break_time.png<>uid://cr2nnkassuup8::::res://assets/work_time.png<>uid://ormykse11xyo::::res://drag_screen.gd
+open_settings.gd::GDScript::2394273551785205136::1788273893::0::1::::<>Node<><>0<>0<><>::
+::res://assets/::1788274854
+BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf::FontFile::7671629379689813702::1788195932::1788196422::1::::<><><>0<>0<>4a584c4f0b290604887018e976175356<>res://.godot/imported/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-70d650436370324a8316ff076ebea549.fontdata::
+BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf::FontFile::7463880277489117378::1788195932::1788196422::1::::<><><>0<>0<>1329da9cde4e55c9eb0065879e41a62f<>res://.godot/imported/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-a93255691a69dacdd8c45840a1641fda.fontdata::
+break_time.png::CompressedTexture2D::4750427656162854190::1788195932::1788196422::1::::<><><>0<>0<>529098277fe20e066b9cdfe835f03123<>res://.godot/imported/break_time.png-b186281a00624f1421d44d95fcacabb1.ctex::
+button_bitmap.png::BitMap::3772483475585229331::1788195932::1788196422::1::::<><><>0<>0<>f7e3aa43196c62fa694d9d842f1463ec<>res://.godot/imported/button_bitmap.png-b07aa410ac05a7c2a2c0b39a5f89eb4c.res::
+button_pressed.png::CompressedTexture2D::66829528330853238::1788195932::1788196422::1::::<><><>0<>0<>418a402721333ec85c94b23ac360d98c<>res://.godot/imported/button_pressed.png-72c3921d1f8d6c8c935f804481f3e257.ctex::
+button_unpressed.png::CompressedTexture2D::8635414515169295005::1788195932::1788196422::1::::<><><>0<>0<>155c2d0c860e063811adcefbb288f115<>res://.godot/imported/button_unpressed.png-0345f0a607cf876b6804100e127b297b.ctex::
+cap.png::CompressedTexture2D::7183722723506773440::1788195932::1788196422::1::::<><><>0<>0<>08af0685e27606f5faee34d035013e87<>res://.godot/imported/cap.png-ea117cc1fb242c3695628458382042d8.ctex::
+cap_bitmask.png::BitMap::8727953574278846638::1788274843::1788274854::1::::<><><>0<>0<>c88ef75689029701c3677ba8cfa19769<>res://.godot/imported/cap_bitmask.png-b041599c9d85255a02c9f4f69c9ad6c6.res::
+charm.png::CompressedTexture2D::3044621645659805712::1788196446::1788196446::1::::<><><>0<>0<>f3d286f190d18388fc9207eed9c99ac4<>res://.godot/imported/charm.png-61f7a96e1fb12d0b3e84865d61613433.ctex::
+digital-7 (mono).ttf::FontFile::986084629997917598::1788195932::1788196422::1::::<><><>0<>0<>9a33c067312851c6b48cd1cd7b7bc74e<>res://.godot/imported/digital-7 (mono).ttf-8cb5efc7d694d0ffc62ad58ac51a9878.fontdata::
+icon.svg::CompressedTexture2D::1192454689536766445::1788195932::1788196422::1::::<><><>0<>0<>64690b39d01c37aa471455b4dbe96579<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+main_body.png::CompressedTexture2D::3970003233535786892::1788195932::1788196422::1::::<><><>0<>0<>3179c1e95f19a16df5b0d25de811eacb<>res://.godot/imported/main_body.png-6b70a5daab8be4f389cb11245cd8feb2.ctex::
+work_time.png::CompressedTexture2D::6022602970895297135::1788195932::1788196422::1::::<><><>0<>0<>e3efc76321b2da3a60a7ff93ec65e6dd<>res://.godot/imported/work_time.png-09b18819e7e6dd684e66a430cd9294db.ctex::
+::res://scripts/::1788446650
+pomodoro.gd::GDScript::3559036602739227493::1788446650::0::1::::<>Node<><>0<>0<><>::
+window_swing.gd::GDScript::961282875781169306::1788446189::0::1::::<>Node<><>0<>0<><>::
