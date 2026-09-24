@@ -4,6 +4,7 @@ extends Node
 @export var break_minutes: int = 10
 @export var debug: bool = true
 
+
 var _is_running: bool = false
 var _is_work: bool = true
 var _remaining_time: float = float(work_minutes * 60)
@@ -31,13 +32,20 @@ func _ready() -> void:
 	else:
 		if debug: print("Pomodoro: parent not found")
 
+
 	# enable processing so _process() runs
 	set_process(true)
 
 	_update_pomodoro_labels()
+	_break_indicator.pause()
+	
 
 func _on_pomo_button_pressed() -> void:
 	_is_running = not _is_running
+	if not _is_running:
+		_break_indicator.pause()
+	else:
+		_break_indicator.play()
 	if debug:
 		print("Pomodoro: running=", _is_running)
 
@@ -62,5 +70,6 @@ func _update_pomodoro_labels() -> void:
 	if _break_indicator:
 		_break_indicator.animation = ("work" if _is_work else "break")
 		_break_indicator.play()
+		
 	_remaining_time = float((work_minutes if _is_work else break_minutes) * 60)
 	_update_clock()

@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://csv8w68ys6y8b"]
 
 [ext_resource type="Texture2D" uid="uid://bwtdmxpq3eqbk" path="res://assets/main_body.png" id="1_ig7tw"]
+[ext_resource type="Shader" uid="uid://r5kh3gkgy0gg" path="res://main.gdshader" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dal34mo56d841" path="res://assets/cap.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dvbcar24urv2l" path="res://assets/button_unpressed.png" id="3_1bvp3"]
+[ext_resource type="Material" uid="uid://dbixbu3rcism1" path="res://shaders/blue.tres" id="3_vivmo"]
 [ext_resource type="Texture2D" uid="uid://7mw4quokacc" path="res://assets/button_pressed.png" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://nxwgn6svru8q" path="res://scripts/window_swing.gd" id="5_272bh"]
 [ext_resource type="BitMap" uid="uid://bt0ois64521xf" path="res://assets/button_bitmap.png" id="5_lquwl"]
@@ -13,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://b8xe3472y5dco" path="res://assets/break_time.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://cr2nnkassuup8" path="res://assets/work_time.png" id="11_dg77c"]
 [ext_resource type="Script" uid="uid://ormykse11xyo" path="res://drag_screen.gd" id="12_dg77c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ycdy4"]
+shader = ExtResource("1_w48qg")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ip871"]
 
@@ -79,6 +84,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 4.0,
+"texture": SubResource("AtlasTexture_ycdy4")
+}],
+"loop": 1,
+"name": &"pause",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_dg77c")
 }, {
 "duration": 4.0,
@@ -98,6 +111,7 @@ animations = [{
 [sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
 
 [node name="main" type="Node2D" unique_id=650135755]
+material = SubResource("ShaderMaterial_ycdy4")
 
 [node name="Control" type="Control" parent="." unique_id=1547425364]
 layout_mode = 3
@@ -107,11 +121,13 @@ offset_bottom = 40.0
 script = ExtResource("12_dg77c")
 
 [node name="fullbody" type="Sprite2D" parent="." unique_id=1394310647]
+material = ExtResource("3_vivmo")
 position = Vector2(95, 33)
 texture = ExtResource("1_ig7tw")
 offset = Vector2(0, 0.5)
 
 [node name="Cap" type="StaticBody2D" parent="." unique_id=2060485426]
+material = ExtResource("3_vivmo")
 physics_material_override = SubResource("PhysicsMaterial_ip871")
 
 [node name="Pivot" type="PinJoint2D" parent="Cap" unique_id=590999161]
@@ -122,12 +138,14 @@ node_b = NodePath("../Charm")
 
 [node name="Charm" type="RigidBody2D" parent="Cap" unique_id=484463194]
 z_index = -1
+material = ExtResource("3_vivmo")
 position = Vector2(170, 78.99999)
 rotation = 0.6523597
 script = ExtResource("5_272bh")
 target_path = NodePath(".")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cap/Charm" unique_id=586687799]
+material = ExtResource("3_vivmo")
 position = Vector2(37.000004, -13.000002)
 rotation = -0.65927607
 texture = ExtResource("6_7mycd")
@@ -139,6 +157,7 @@ scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_hxrmi")
 
 [node name="cap" type="Sprite2D" parent="Cap" unique_id=1388584460]
+material = ExtResource("3_vivmo")
 position = Vector2(179, 32)
 texture = ExtResource("2_0xm2m")
 offset = Vector2(0, 0.5)
@@ -153,6 +172,7 @@ shape = SubResource("CapsuleShape2D_5vw27")
 position = Vector2(164, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cap/SwingBoundary" unique_id=810342164]
+material = ExtResource("3_vivmo")
 position = Vector2(43, 30)
 shape = SubResource("RectangleShape2D_j343n")
 
@@ -163,6 +183,7 @@ offset_bottom = 65.0
 texture_click_mask = ExtResource("6_ycdy4")
 
 [node name="Clock" type="Label" parent="." unique_id=1104957864]
+material = ExtResource("3_vivmo")
 offset_left = 55.0
 offset_top = 20.0
 offset_right = 160.0
@@ -176,12 +197,13 @@ text = "30:00"
 script = ExtResource("9_pom")
 
 [node name="BreakIndicator" type="AnimatedSprite2D" parent="." unique_id=1957707449]
+material = ExtResource("3_vivmo")
 position = Vector2(143, 32)
 sprite_frames = SubResource("SpriteFrames_ip871")
-animation = &"break"
-frame_progress = 0.16956511
+animation = &"pause"
 
 [node name="RoundButton" type="TextureButton" parent="." unique_id=645797071]
+material = ExtResource("3_vivmo")
 offset_left = 18.0
 offset_top = 24.0
 offset_right = 35.0
