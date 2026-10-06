@@ -28,6 +28,10 @@ window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/per_pixel_transparency/allowed=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -40,3 +44,54 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 viewport/transparent_background=true
+
+[shader_globals]
+
+colorone={
+"type": "color",
+"value": Color(0.38039216, 0.3372549, 0.49019608, 1)
+}
+colortwo={
+"type": "color",
+"value": Color(0.50980395, 0.41568628, 0.58431375, 1)
+}
+colorthree={
+"type": "color",
+"value": Color(0.64705884, 0.49803922, 0.6784314, 1)
+}
+colorfour={
+"type": "color",
+"value": Color(0.76862746, 0.58431375, 0.7490196, 1)
+}
+colorfive={
+"type": "color",
+"value": Color(0.8627451, 0.6745098, 0.7882353, 1)
+}
+colorsix={
+"type": "color",
+"value": Color(0.95686275, 0.76862746, 0.83137256, 1)
+}
+newcolorone={
+"type": "color",
+"value": Color(0.38039216, 0.3372549, 0.49019608, 1)
+}
+newcolortwo={
+"type": "color",
+"value": Color(0.50980395, 0.41568628, 0.58431375, 1)
+}
+newcolorthree={
+"type": "color",
+"value": Color(0.64705884, 0.49411765, 0.6784314, 1)
+}
+newcolorfour={
+"type": "color",
+"value": Color(0.76862746, 0.58431375, 0.7529412, 1)
+}
+newcolorfive={
+"type": "color",
+"value": Color(0.8666667, 0.6745098, 0.7882353, 1)
+}
+newcolorsix={
+"type": "color",
+"value": Color(0.95686275, 0.76862746, 0.8352941, 1)
+}

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bjm3qdtqussm7" path="res://assets/charm.png" id="6_7mycd"]
 [ext_resource type="BitMap" uid="uid://dwl5ec7jpd6w5" path="res://assets/cap_bitmask.png" id="6_ycdy4"]
 [ext_resource type="FontFile" uid="uid://obww1jk45dny" path="res://assets/digital-7 (mono).ttf" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://08ycnl7utxt5" path="res://changeColor.gd" id="9_2cqfq"]
 [ext_resource type="Script" uid="uid://bqya2vw4ijq66" path="res://scripts/pomodoro.gd" id="9_pom"]
 [ext_resource type="Texture2D" uid="uid://b8xe3472y5dco" path="res://assets/break_time.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://cr2nnkassuup8" path="res://assets/work_time.png" id="11_dg77c"]
@@ -181,6 +182,7 @@ offset_left = 147.0
 offset_right = 210.0
 offset_bottom = 65.0
 texture_click_mask = ExtResource("6_ycdy4")
+script = ExtResource("9_2cqfq")
 
 [node name="Clock" type="Label" parent="." unique_id=1104957864]
 material = ExtResource("3_vivmo")
@@ -217,3 +219,5 @@ texture_hover = ExtResource("3_1bvp3")
 texture_disabled = ExtResource("3_1bvp3")
 texture_focused = ExtResource("3_1bvp3")
 texture_click_mask = ExtResource("5_lquwl")
+
+[connection signal="pressed" from="Cap/TextureButton2" to="Cap/TextureButton2" method="_on_pressed"]

@@ -50,7 +50,7 @@ func _on_pomo_button_pressed() -> void:
 		print("Pomodoro: running=", _is_running)
 
 func _process(delta: float) -> void:
-	if _is_running:
+	if _is_running: 
 		_remaining_time -= delta
 		if _remaining_time <= 0:
 			_is_work = not _is_work

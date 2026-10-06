@@ -1,3 +1,6 @@
 res://main.tscn
-res://scripts/pomodoro.gd
 res://main.gdshader
+res://scripts/pomodoro.gd
+res://shaders/blue.tres
+res://deletelater.gd
+res://changeColor.gd
