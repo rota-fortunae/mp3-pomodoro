@@ -146,6 +146,7 @@ script = ExtResource("5_272bh")
 target_path = NodePath(".")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cap/Charm" unique_id=586687799]
+z_index = 1
 material = ExtResource("3_vivmo")
 position = Vector2(37.000004, -13.000002)
 rotation = -0.65927607
