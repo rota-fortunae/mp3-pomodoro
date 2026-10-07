@@ -20,4 +20,4 @@ func _input(event):
 		var mouse_pos = DisplayServer.mouse_get_position()
 		var new_window_pos = mouse_pos - click_offset
 		
-		DisplayServer.window_set_position(new_window_pos)
+		DisplayServer.window_set_position(new_window_pos) 

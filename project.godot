@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mp3_pomodoro"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://drd63wn3vxmp0"
 config/disable_project_settings_override=true
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://dvbcar24urv2l"

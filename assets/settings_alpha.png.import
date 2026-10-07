@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://n2gvpisaabwu"
+path="res://.godot/imported/settings_alpha.png-98bd58188b0faa90811b57cfde112688.res"
+
+[deps]
+
+source_file="res://assets/settings_alpha.png"
+dest_files=["res://.godot/imported/settings_alpha.png-98bd58188b0faa90811b57cfde112688.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

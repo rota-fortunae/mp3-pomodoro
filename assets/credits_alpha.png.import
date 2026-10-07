@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://v1ukrlaqm1kr"
+path="res://.godot/imported/credits_alpha.png-8e38a532dd6928f7f9d1f1eef7df9534.res"
+
+[deps]
+
+source_file="res://assets/credits_alpha.png"
+dest_files=["res://.godot/imported/credits_alpha.png-8e38a532dd6928f7f9d1f1eef7df9534.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

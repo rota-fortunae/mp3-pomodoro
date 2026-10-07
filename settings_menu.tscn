@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://drd63wn3vxmp0"]
+
+[ext_resource type="Texture2D" uid="uid://ceewp8s2hwa3m" path="res://assets/settings_menu.png" id="1_2d6lb"]
+[ext_resource type="Theme" uid="uid://casxy0kfqpctp" path="res://assets/settings_menu_theme.tres" id="1_8pph3"]
+[ext_resource type="Texture2D" uid="uid://dpb10i5hsgux7" path="res://assets/credits.png" id="2_nxj4t"]
+[ext_resource type="Texture2D" uid="uid://bdxuce6h3wypw" path="res://assets/settings_text.png" id="3_ttjgw"]
+[ext_resource type="Texture2D" uid="uid://dok4vrf8mmqac" path="res://assets/credits_unclicked.png" id="3_yl4dm"]
+[ext_resource type="Texture2D" uid="uid://bbxombla7vewe" path="res://assets/credits_clicked.png" id="4_ttjgw"]
+[ext_resource type="BitMap" uid="uid://v1ukrlaqm1kr" path="res://assets/credits_alpha.png" id="5_8pph3"]
+[ext_resource type="Texture2D" uid="uid://7dp52eumjdmm" path="res://assets/settings_unclicked.png" id="6_exc7q"]
+[ext_resource type="Texture2D" uid="uid://cxn6lb5040qa4" path="res://assets/settings_clicked.png" id="7_ajx48"]
+[ext_resource type="BitMap" uid="uid://n2gvpisaabwu" path="res://assets/settings_alpha.png" id="8_56ip2"]
+[ext_resource type="Texture2D" uid="uid://ynlfgmofqms" path="res://assets/exit_button.png" id="10_8pph3"]
+[ext_resource type="BitMap" uid="uid://csakl3vshxmu8" path="res://assets/exit_alpha.png" id="11_exc7q"]
+[ext_resource type="StyleBox" uid="uid://derieksoqxsca" path="res://assets/transparent_theme.tres" id="13_exc7q"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
+
+[node name="SettingsMenu" type="Control" unique_id=534571828]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 140.0
+offset_bottom = 115.0
+theme = ExtResource("1_8pph3")
+
+[node name="background" type="TextureRect" parent="." unique_id=1596246548]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_8pph3")
+texture = ExtResource("1_2d6lb")
+
+[node name="credits" type="TextureRect" parent="." unique_id=21259489]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_8pph3")
+texture = ExtResource("2_nxj4t")
+
+[node name="settings" type="TextureRect" parent="." unique_id=2108530980]
+visible = false
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 115.0
+theme = ExtResource("1_8pph3")
+texture = ExtResource("3_ttjgw")
+
+[node name="creditsButton" type="TextureButton" parent="." unique_id=1208418462]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 17.0
+offset_right = 126.0
+offset_bottom = 29.0
+theme = ExtResource("1_8pph3")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ip871")
+texture_normal = ExtResource("3_yl4dm")
+texture_pressed = ExtResource("4_ttjgw")
+texture_click_mask = ExtResource("5_8pph3")
+
+[node name="settingsButton" type="TextureButton" parent="." unique_id=1128136574]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 17.0
+offset_right = 61.0
+offset_bottom = 29.0
+theme = ExtResource("1_8pph3")
+texture_normal = ExtResource("6_exc7q")
+texture_pressed = ExtResource("7_ajx48")
+texture_click_mask = ExtResource("8_56ip2")
+
+[node name="exitButton" type="TextureButton" parent="." unique_id=904278983]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_right = 140.0
+offset_bottom = 12.0
+theme = ExtResource("1_8pph3")
+texture_normal = ExtResource("10_8pph3")
+texture_click_mask = ExtResource("11_exc7q")
+
+[node name="green" type="Button" parent="." unique_id=319060128]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 43.0
+offset_right = 44.0
+offset_bottom = 55.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="pink" type="Button" parent="." unique_id=1082760081]
+visible = false
+layout_mode = 0
+offset_left = 47.0
+offset_top = 43.0
+offset_right = 85.0
+offset_bottom = 55.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="red" type="Button" parent="." unique_id=1214924962]
+visible = false
+layout_mode = 0
+offset_left = 88.0
+offset_top = 43.0
+offset_right = 126.0
+offset_bottom = 55.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="black" type="Button" parent="." unique_id=1161154831]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 57.0
+offset_right = 44.0
+offset_bottom = 69.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="yellow" type="Button" parent="." unique_id=1498593614]
+visible = false
+layout_mode = 0
+offset_left = 47.0
+offset_top = 57.0
+offset_right = 85.0
+offset_bottom = 69.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="blue" type="Button" parent="." unique_id=609336276]
+visible = false
+layout_mode = 0
+offset_left = 88.0
+offset_top = 57.0
+offset_right = 126.0
+offset_bottom = 69.0
+theme = ExtResource("1_8pph3")
+theme_override_styles/normal = ExtResource("13_exc7q")
+theme_override_styles/hover = ExtResource("13_exc7q")
+theme_override_styles/disabled = ExtResource("13_exc7q")
+theme_override_styles/focus = ExtResource("13_exc7q")
+
+[node name="audioSlider" type="HSlider" parent="." unique_id=1758624989]
+visible = false
+layout_mode = 0
+offset_left = 30.0
+offset_top = 28.0
+offset_right = 123.0
+offset_bottom = 44.0
+theme = ExtResource("1_8pph3")
+
+[node name="ColorPicker" type="ColorPicker" parent="." unique_id=1413895846]
+visible = false
+layout_mode = 0
+offset_left = 90.99999
+offset_top = 37.999996
+offset_right = 391.0
+offset_bottom = 672.0
+scale = Vector2(0.1, 0.1)

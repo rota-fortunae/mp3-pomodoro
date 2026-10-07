@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://csakl3vshxmu8"
+path="res://.godot/imported/exit_alpha.png-f898e2db32758188656884aa07c3ed59.res"
+
+[deps]
+
+source_file="res://assets/exit_alpha.png"
+dest_files=["res://.godot/imported/exit_alpha.png-f898e2db32758188656884aa07c3ed59.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
