@@ -1,13 +1,13 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1791319191
+::res://::1791333835
 charm_swing.gd::GDScript::961282875781169306::1788446189::0::1::::<>Node<><>0<>0<><>::
 clock_text.gdshader::Shader::8675829124289427134::1791319069::0::1::::<><><>0<>0<><>::
-drag_screen.gd::GDScript::1018510248975901322::1788195932::0::1::::<>Control<><>0<>0<><>::
+drag_screen.gd::GDScript::1018510248975901322::1791322543::0::1::::<>Control<><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1789428041::0::1::::<><><>0<>0<><>::
 main.gdshader::Shader::1255762825339317910::1791319366::0::1::::<><><>0<>0<><>::
-main.tscn::PackedScene::6081637114251393051::1791319383::0::1::::<><><>0<>0<><>::uid://bwtdmxpq3eqbk::::res://assets/main_body.png<>uid://r5kh3gkgy0gg::::res://main.gdshader<>uid://dal34mo56d841::::res://assets/cap.png<>uid://dvbcar24urv2l::::res://assets/button_unpressed.png<>uid://dbixbu3rcism1::::res://universal.tres<>uid://7mw4quokacc::::res://assets/button_pressed.png<>uid://nxwgn6svru8q::::res://charm_swing.gd<>uid://bt0ois64521xf::::res://assets/button_bitmap.png<>uid://bjm3qdtqussm7::::res://assets/charm.png<>uid://dwl5ec7jpd6w5::::res://assets/cap_bitmask.png<>uid://obww1jk45dny::::res://assets/digital-7 (mono).ttf<>uid://08ycnl7utxt5::::res://changeColor.gd<>uid://bqya2vw4ijq66::::res://pomodoro.gd<>uid://b8xe3472y5dco::::res://assets/break_time.png<>uid://dvuvvxw1eswcs::::res://clock_text.gdshader<>uid://cr2nnkassuup8::::res://assets/work_time.png<>uid://ormykse11xyo::::res://drag_screen.gd
+main.tscn::PackedScene::6081637114251393051::1791322494::0::1::::<><><>0<>0<><>::uid://bwtdmxpq3eqbk::::res://assets/main_body.png<>uid://r5kh3gkgy0gg::::res://main.gdshader<>uid://dal34mo56d841::::res://assets/cap.png<>uid://dvbcar24urv2l::::res://assets/button_unpressed.png<>uid://dbixbu3rcism1::::res://universal.tres<>uid://7mw4quokacc::::res://assets/button_pressed.png<>uid://nxwgn6svru8q::::res://charm_swing.gd<>uid://bt0ois64521xf::::res://assets/button_bitmap.png<>uid://bjm3qdtqussm7::::res://assets/charm.png<>uid://dwl5ec7jpd6w5::::res://assets/cap_bitmask.png<>uid://obww1jk45dny::::res://assets/digital-7 (mono).ttf<>uid://08ycnl7utxt5::::res://settings_button.gd<>uid://bqya2vw4ijq66::::res://pomodoro.gd<>uid://b8xe3472y5dco::::res://assets/break_time.png<>uid://dvuvvxw1eswcs::::res://clock_text.gdshader<>uid://cr2nnkassuup8::::res://assets/work_time.png<>uid://ormykse11xyo::::res://drag_screen.gd
 pomodoro.gd::GDScript::3559036602739227493::1791250102::0::1::::<>Node<><>0<>0<><>::
-settings_button.gd::GDScript::1824307037526821912::1791319366::0::1::::<>TextureButton<><>0<>0<><>::
+settings_button.gd::GDScript::1824307037526821912::1791319665::0::1::::<>TextureButton<><>0<>0<><>::
 universal.tres::ShaderMaterial::7247365287874284410::1791300405::0::1::::<><><>0<>0<><>::uid://r5kh3gkgy0gg::::res://main.gdshader
 ::res://addons/::1791250043
 ::res://addons/godot_super-wakatime/::1791250123

@@ -1,9 +1,0 @@
-res://main.tscn
-res://main.gdshader
-res://scripts/pomodoro.gd
-res://shaders/blue.tres
-res://deletelater.gd
-res://changeColor.gd
-res://settings_button.gd
-res://homework.txt
-res://drag_screen.gd
