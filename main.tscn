@@ -17,6 +17,7 @@
 [ext_resource type="Shader" uid="uid://dvuvvxw1eswcs" path="res://clock_text.gdshader" id="11_clock"]
 [ext_resource type="Texture2D" uid="uid://cr2nnkassuup8" path="res://assets/work_time.png" id="11_dg77c"]
 [ext_resource type="Script" uid="uid://ormykse11xyo" path="res://drag_screen.gd" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://drd63wn3vxmp0" path="res://settings_menu.tscn" id="18_074og"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ycdy4"]
 shader = ExtResource("1_w48qg")
@@ -148,7 +149,7 @@ rotation = 0.6523597
 script = ExtResource("5_272bh")
 target_path = NodePath(".")
 
-[node name="Sprite2D" type="Sprite2D" parent="Cap/Charm" unique_id=586687799]
+[node name="CharmSprite" type="Sprite2D" parent="Cap/Charm" unique_id=586687799]
 z_index = 1
 material = ExtResource("3_vivmo")
 position = Vector2(37.000004, -13.000002)
@@ -187,12 +188,21 @@ material = ExtResource("3_vivmo")
 position = Vector2(43, 30)
 shape = SubResource("RectangleShape2D_j343n")
 
-[node name="TextureButton2" type="TextureButton" parent="Cap" unique_id=1418566529]
+[node name="settingsButton" type="TextureButton" parent="Cap" unique_id=1418566529]
 offset_left = 147.0
 offset_right = 210.0
 offset_bottom = 65.0
 texture_click_mask = ExtResource("6_ycdy4")
 script = ExtResource("9_2cqfq")
+
+[node name="SettingsMenu" parent="Cap/settingsButton" unique_id=534571828 instance=ExtResource("18_074og")]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = -99.0
+offset_top = 34.0
+offset_right = 41.0
+offset_bottom = 149.0
 
 [node name="TimerLabel" type="Label" parent="." unique_id=1104957864]
 z_index = 1
@@ -234,4 +244,4 @@ texture_disabled = ExtResource("3_1bvp3")
 texture_focused = ExtResource("3_1bvp3")
 texture_click_mask = ExtResource("5_lquwl")
 
-[connection signal="pressed" from="Cap/TextureButton2" to="Cap/TextureButton2" method="_on_pressed"]
+[connection signal="pressed" from="Cap/settingsButton" to="Cap/settingsButton" method="_on_pressed"]

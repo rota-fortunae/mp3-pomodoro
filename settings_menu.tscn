@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ceewp8s2hwa3m" path="res://assets/settings_menu.png" id="1_2d6lb"]
 [ext_resource type="Theme" uid="uid://casxy0kfqpctp" path="res://assets/settings_menu_theme.tres" id="1_8pph3"]
+[ext_resource type="Script" uid="uid://c03opoqntlvlc" path="res://settings_menu_script.gd" id="2_ajx48"]
 [ext_resource type="Texture2D" uid="uid://dpb10i5hsgux7" path="res://assets/credits.png" id="2_nxj4t"]
 [ext_resource type="Texture2D" uid="uid://bdxuce6h3wypw" path="res://assets/settings_text.png" id="3_ttjgw"]
 [ext_resource type="Texture2D" uid="uid://dok4vrf8mmqac" path="res://assets/credits_unclicked.png" id="3_yl4dm"]
@@ -22,6 +23,7 @@ anchors_preset = 0
 offset_right = 140.0
 offset_bottom = 115.0
 theme = ExtResource("1_8pph3")
+script = ExtResource("2_ajx48")
 
 [node name="background" type="TextureRect" parent="." unique_id=1596246548]
 layout_mode = 0
@@ -31,14 +33,14 @@ theme = ExtResource("1_8pph3")
 texture = ExtResource("1_2d6lb")
 
 [node name="credits" type="TextureRect" parent="." unique_id=21259489]
+visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 140.0
+offset_bottom = 115.0
 theme = ExtResource("1_8pph3")
 texture = ExtResource("2_nxj4t")
 
 [node name="settings" type="TextureRect" parent="." unique_id=2108530980]
-visible = false
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 115.0
@@ -158,7 +160,6 @@ theme_override_styles/disabled = ExtResource("13_exc7q")
 theme_override_styles/focus = ExtResource("13_exc7q")
 
 [node name="audioSlider" type="HSlider" parent="." unique_id=1758624989]
-visible = false
 layout_mode = 0
 offset_left = 30.0
 offset_top = 28.0
@@ -174,3 +175,11 @@ offset_top = 37.999996
 offset_right = 391.0
 offset_bottom = 672.0
 scale = Vector2(0.1, 0.1)
+
+[connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="pink" to="." method="_on_pink_pressed"]
+[connection signal="pressed" from="red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]
