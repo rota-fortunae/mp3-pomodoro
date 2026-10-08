@@ -239,9 +239,9 @@ keep_pressed_outside = true
 button_group = SubResource("ButtonGroup_ip871")
 texture_normal = ExtResource("3_1bvp3")
 texture_pressed = ExtResource("4_lquwl")
-texture_hover = ExtResource("3_1bvp3")
-texture_disabled = ExtResource("3_1bvp3")
-texture_focused = ExtResource("3_1bvp3")
+texture_hover = ExtResource("4_lquwl")
+texture_focused = ExtResource("4_lquwl")
 texture_click_mask = ExtResource("5_lquwl")
 
 [connection signal="pressed" from="Cap/settingsButton" to="Cap/settingsButton" method="_on_pressed"]
+[connection signal="pressed" from="TimerButton" to="Timer" method="_on_timer_button_pressed"]

@@ -11,36 +11,29 @@ var _remaining_time: float = float(work_minutes * 60)
 
 var _clock_label: Label = null
 var _break_indicator: AnimatedSprite2D = null
-var _button: TextureButton = null
 
 func _ready() -> void:
 	var p = get_parent()
 	if p:
-		if p.has_node("Clock"):
-			_clock_label = p.get_node("Clock")
+		if p.has_node("TimerLabel"):
+			_clock_label = p.get_node("TimerLabel")
 		else:
-			if debug: print("Pomodoro: Clock label not found")
+			if debug: print("Pomodoro: TimerLabel not found")
 		if p.has_node("BreakIndicator"):
 			_break_indicator = p.get_node("BreakIndicator")
 		else:
 			if debug: print("Pomodoro: BreakIndicator not found")
-		if p.has_node("RoundButton"):
-			_button = p.get_node("RoundButton")
-			_button.connect("pressed", Callable(self, "_on_pomo_button_pressed"))
-		else:
-			if debug: print("Pomodoro: TextureButton not found")
 	else:
 		if debug: print("Pomodoro: parent not found")
 
 
-	# enable processing so _process() runs
 	set_process(true)
 
 	_update_pomodoro_labels()
 	_break_indicator.pause()
 	
 
-func _on_pomo_button_pressed() -> void:
+func _on_timer_button_pressed() -> void:
 	_is_running = not _is_running
 	if not _is_running:
 		_break_indicator.pause()
@@ -66,7 +59,6 @@ func _update_clock() -> void:
 		_clock_label.text = str(m) + ":" + ("%02d" % s)
 
 func _update_pomodoro_labels() -> void:
-	# set animated indicator to either 'work' or 'break' (expects animations named accordingly)
 	if _break_indicator:
 		_break_indicator.animation = ("work" if _is_work else "break")
 		_break_indicator.play()
