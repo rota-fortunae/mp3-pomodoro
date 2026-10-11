@@ -4,7 +4,7 @@ A cute, retro pomodoro timer
 
 ## Builds
 
-Currently, this only has a working build for mac and windows.
+Currently, this only has a working build for mac and windows. I'm planning on making a linux and web export later! You can also find my project builds at the [itch page](https://rota-fortunae.itch.io/mp3-pomodoro).
 
 ## Plans
 
@@ -16,7 +16,8 @@ Currently, this only has a working build for mac and windows.
 
 ## Authors
 
-Me, rota-fortunae
+programmer & artist: rota-fortunae
+musician: ? 
 
 ## License
 
