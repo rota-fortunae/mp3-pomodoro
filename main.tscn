@@ -196,13 +196,12 @@ texture_click_mask = ExtResource("6_ycdy4")
 script = ExtResource("9_2cqfq")
 
 [node name="SettingsMenu" parent="Cap/settingsButton" unique_id=534571828 instance=ExtResource("18_074og")]
-visible = false
 z_index = 1
 layout_mode = 0
-offset_left = -99.0
-offset_top = 34.0
-offset_right = 41.0
-offset_bottom = 149.0
+offset_left = -139.0
+offset_top = 36.0
+offset_right = 1.0
+offset_bottom = 151.0
 
 [node name="TimerLabel" type="Label" parent="." unique_id=1104957864]
 z_index = 1
