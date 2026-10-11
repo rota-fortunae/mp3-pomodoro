@@ -15,8 +15,22 @@
 [ext_resource type="BitMap" uid="uid://csakl3vshxmu8" path="res://assets/exit_alpha.png" id="11_exc7q"]
 [ext_resource type="StyleBox" uid="uid://derieksoqxsca" path="res://assets/transparent_theme.tres" id="13_exc7q"]
 [ext_resource type="Material" uid="uid://dbixbu3rcism1" path="res://universal.tres" id="14_univ"]
+[ext_resource type="Texture2D" uid="uid://4p8636ld16k7" path="res://assets/knob.png" id="16_mwvxn"]
+[ext_resource type="Texture2D" uid="uid://d2u3rchnbqvkc" path="res://assets/comingsoon.png" id="17_0tp7r"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3877l"]
+bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.38039216, 0.3372549, 0.49019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tp7r"]
+bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8lcu"]
+bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
 
 [node name="SettingsMenu" type="Control" unique_id=534571828]
 material = ExtResource("14_univ")
@@ -166,12 +180,18 @@ theme_override_styles/disabled = ExtResource("13_exc7q")
 theme_override_styles/focus = ExtResource("13_exc7q")
 
 [node name="audioSlider" type="HSlider" parent="." unique_id=1758624989]
+use_parent_material = true
 layout_mode = 0
 offset_left = 30.0
-offset_top = 28.0
+offset_top = 29.0
 offset_right = 123.0
-offset_bottom = 44.0
+offset_bottom = 45.0
 theme = ExtResource("1_8pph3")
+theme_override_icons/grabber = ExtResource("16_mwvxn")
+theme_override_icons/grabber_highlight = ExtResource("16_mwvxn")
+theme_override_styles/slider = SubResource("StyleBoxFlat_3877l")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_0tp7r")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_i8lcu")
 
 [node name="ColorPicker" type="ColorPicker" parent="." unique_id=1413895846]
 visible = false
@@ -181,6 +201,11 @@ offset_top = 37.999996
 offset_right = 391.0
 offset_bottom = 672.0
 scale = Vector2(0.1, 0.1)
+
+[node name="tempsprite" type="Sprite2D" parent="." unique_id=1680090603]
+use_parent_material = true
+position = Vector2(68, 91)
+texture = ExtResource("17_0tp7r")
 
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
