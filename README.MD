@@ -24,6 +24,5 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
 * [lospec community](https://lospec.com/palette-list)
 * [Godot](https://godotengine.org/license/)
