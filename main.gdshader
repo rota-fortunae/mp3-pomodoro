@@ -20,7 +20,7 @@ void fragment() {
     vec4 oldcolors[6] = vec4[](colorone, colortwo, colorthree, colorfour, colorfive, colorsix);
     vec4 newcolors[6] = vec4[](newcolorone, newcolortwo, newcolorthree, newcolorfour, newcolorfive, newcolorsix);
     
-    float precision_threshold = 0.1; 
+    float precision_threshold = 1.0/255.0; 
     
     for(int i = 0; i < 6; i++) {
         vec4 target_color = oldcolors[i];

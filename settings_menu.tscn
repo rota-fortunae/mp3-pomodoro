@@ -13,12 +13,16 @@
 [ext_resource type="BitMap" uid="uid://n2gvpisaabwu" path="res://assets/settings_alpha.png" id="8_56ip2"]
 [ext_resource type="Texture2D" uid="uid://ynlfgmofqms" path="res://assets/exit_button.png" id="10_8pph3"]
 [ext_resource type="BitMap" uid="uid://csakl3vshxmu8" path="res://assets/exit_alpha.png" id="11_exc7q"]
-[ext_resource type="StyleBox" uid="uid://derieksoqxsca" path="res://assets/transparent_theme.tres" id="13_exc7q"]
-[ext_resource type="Material" uid="uid://dbixbu3rcism1" path="res://universal.tres" id="14_univ"]
+[ext_resource type="Shader" uid="uid://r5kh3gkgy0gg" path="res://main.gdshader" id="15_mwvxn"]
 [ext_resource type="Texture2D" uid="uid://4p8636ld16k7" path="res://assets/knob.png" id="16_mwvxn"]
-[ext_resource type="Texture2D" uid="uid://d2u3rchnbqvkc" path="res://assets/comingsoon.png" id="17_0tp7r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0tp7r"]
+shader = ExtResource("15_mwvxn")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56ip2"]
+shader = ExtResource("15_mwvxn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3877l"]
 bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
@@ -32,13 +36,10 @@ bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8lcu"]
 bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
 
-[node name="SettingsMenu" type="Control" unique_id=534571828]
-material = ExtResource("14_univ")
+[node name="SettingsMenu" type="Control" unique_id=948723413]
+material = SubResource("ShaderMaterial_0tp7r")
 layout_mode = 3
 anchors_preset = 0
-offset_right = 140.0
-offset_bottom = 115.0
-theme = ExtResource("1_8pph3")
 script = ExtResource("2_ajx48")
 
 [node name="background" type="TextureRect" parent="." unique_id=1596246548]
@@ -69,9 +70,9 @@ texture = ExtResource("3_ttjgw")
 [node name="creditsButton" type="TextureButton" parent="." unique_id=1208418462]
 use_parent_material = true
 layout_mode = 0
-offset_left = 71.0
+offset_left = 70.0
 offset_top = 17.0
-offset_right = 126.0
+offset_right = 125.0
 offset_bottom = 29.0
 theme = ExtResource("1_8pph3")
 toggle_mode = true
@@ -85,9 +86,9 @@ texture_click_mask = ExtResource("5_8pph3")
 [node name="settingsButton" type="TextureButton" parent="." unique_id=1128136574]
 use_parent_material = true
 layout_mode = 0
-offset_left = 5.0
+offset_left = 6.0
 offset_top = 17.0
-offset_right = 61.0
+offset_right = 62.0
 offset_bottom = 29.0
 theme = ExtResource("1_8pph3")
 toggle_mode = true
@@ -107,82 +108,107 @@ theme = ExtResource("1_8pph3")
 texture_normal = ExtResource("10_8pph3")
 texture_click_mask = ExtResource("11_exc7q")
 
+[node name="pigeon" type="Button" parent="." unique_id=259782362]
+custom_maximum_size = Vector2(-1, 12)
+layout_mode = 0
+offset_left = 47.0
+offset_top = 85.0
+offset_right = 85.0
+offset_bottom = 107.0
+theme = ExtResource("1_8pph3")
+text = "pigeon"
+
+[node name="custom" type="Button" parent="." unique_id=2082088473]
+custom_maximum_size = Vector2(38, 12)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 85.0
+offset_right = 126.0
+offset_bottom = 107.0
+theme = ExtResource("1_8pph3")
+text = "new"
+
 [node name="green" type="Button" parent="." unique_id=319060128]
+material = SubResource("ShaderMaterial_56ip2")
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 6.0
 offset_top = 43.0
 offset_right = 44.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "green"
+text_direction = 1
 
 [node name="pink" type="Button" parent="." unique_id=1082760081]
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 47.0
 offset_top = 43.0
 offset_right = 85.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "pink"
+text_direction = 1
 
 [node name="red" type="Button" parent="." unique_id=1214924962]
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 88.0
 offset_top = 43.0
 offset_right = 126.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "amber"
+text_direction = 1
 
 [node name="black" type="Button" parent="." unique_id=1161154831]
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 6.0
 offset_top = 57.0
 offset_right = 44.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "grey"
+text_direction = 1
 
 [node name="yellow" type="Button" parent="." unique_id=1498593614]
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 47.0
 offset_top = 57.0
 offset_right = 85.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "yellow"
+text_direction = 1
+
+[node name="star" type="Button" parent="." unique_id=106566613]
+custom_maximum_size = Vector2(-1, 12)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 85.0
+offset_right = 44.0
+offset_bottom = 107.0
+theme = ExtResource("1_8pph3")
+text = "star"
 
 [node name="blue" type="Button" parent="." unique_id=609336276]
+custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 88.0
 offset_top = 57.0
 offset_right = 126.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
-theme_override_styles/normal = ExtResource("13_exc7q")
-theme_override_styles/hover = ExtResource("13_exc7q")
-theme_override_styles/disabled = ExtResource("13_exc7q")
-theme_override_styles/focus = ExtResource("13_exc7q")
+text = "blue"
+text_direction = 1
 
 [node name="audioSlider" type="HSlider" parent="." unique_id=1758624989]
 use_parent_material = true
 layout_mode = 0
-offset_left = 30.0
+offset_left = 33.0
 offset_top = 29.0
 offset_right = 123.0
 offset_bottom = 45.0
@@ -193,7 +219,7 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_3877l")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_0tp7r")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_i8lcu")
 
-[node name="ColorPicker" type="ColorPicker" parent="." unique_id=1413895846]
+[node name="colorPicker" type="ColorPicker" parent="." unique_id=1413895846]
 visible = false
 layout_mode = 0
 offset_left = 90.99999
@@ -202,10 +228,13 @@ offset_right = 391.0
 offset_bottom = 672.0
 scale = Vector2(0.1, 0.1)
 
-[node name="tempsprite" type="Sprite2D" parent="." unique_id=1680090603]
-use_parent_material = true
-position = Vector2(68, 91)
-texture = ExtResource("17_0tp7r")
+[node name="customTheme" type="Node" parent="." unique_id=1160327925]
+
+[node name="Button" type="Button" parent="customTheme" unique_id=819493891]
+offset_left = 73.0
+offset_top = 73.0
+offset_right = 81.0
+offset_bottom = 81.0
 
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]

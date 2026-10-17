@@ -1,9 +1,14 @@
+CanvasLayer
+CanvasGroup
+Control
+Button
+ColorRect
+Node
+Label
 Sprite2D
 ColorPicker
-Control
 LineEdit
 HSlider
-Button
 TextureRect
 TextureButton
 Window

@@ -73,8 +73,10 @@ func _on_settings_button_pressed() -> void:
 	$audioSlider.visible = true
 	credits.visible=false
 	credits_button.button_pressed = false
+	$pigeon.visible=true
+	$star.visible=true
+	$custom.visible=true
 	
-
 func _on_credits_button_pressed() -> void:
 	settings.visible=false
 	green.visible=false
@@ -84,6 +86,10 @@ func _on_credits_button_pressed() -> void:
 	yellow.visible=false
 	blue.visible=false
 	$audioSlider.visible = false
+	$pigeon.visible=false
+	$star.visible=false
+	$custom.visible=false
+	
 	
 	credits.visible=true
 	settings_button.button_pressed = false

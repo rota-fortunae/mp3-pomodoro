@@ -1,4 +1,5 @@
-res://settings_menu.tscn
+res://main.tscn
 res://main.gdshader
+res://settings_menu.tscn
 res://assets/settings_menu_theme.tres
-res://export_presets.cfg
+res://settings_menu_script.gd
