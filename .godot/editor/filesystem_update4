@@ -1,5 +1,5 @@
-res://main.tscn
-res://main.gdshader
 res://settings_menu.tscn
 res://assets/settings_menu_theme.tres
+res://main.gdshader
 res://settings_menu_script.gd
+res://main.tscn

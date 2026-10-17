@@ -14,6 +14,11 @@ extends Control
 @onready var audio_slider: HSlider = $audioSlider
 @onready var credits: TextureRect = $credits
 
+@onready var pigeon: Button = $pigeon
+@onready var star: Button = $star
+@onready var custom: Button = $custom
+
+var colorbuttonlis = [green, pink, red, black, yellow, blue]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -73,9 +78,9 @@ func _on_settings_button_pressed() -> void:
 	$audioSlider.visible = true
 	credits.visible=false
 	credits_button.button_pressed = false
-	$pigeon.visible=true
-	$star.visible=true
-	$custom.visible=true
+	pigeon.visible=true
+	star.visible=true
+	custom.visible=true
 	
 func _on_credits_button_pressed() -> void:
 	settings.visible=false
@@ -86,9 +91,9 @@ func _on_credits_button_pressed() -> void:
 	yellow.visible=false
 	blue.visible=false
 	$audioSlider.visible = false
-	$pigeon.visible=false
-	$star.visible=false
-	$custom.visible=false
+	pigeon.visible=false
+	star.visible=false
+	custom.visible=false
 	
 	
 	credits.visible=true
@@ -100,5 +105,20 @@ func _on_exit_button_pressed() -> void:
 	$"../../Charm/CharmSprite".visible = true
 	$"../../Cap".visible = true 
 	visible = false
+
+
+func _on_pigeon_pressed() -> void:
+	$"../../Charm/CharmSprite".texture = load("res://assets/pigeon_charm.png")
+	star.button_pressed=false
+	custom.button_pressed=false
+
+func _on_custom_pressed() -> void:
+	#ADD FUNCTIONALITY LATERRRRR
+	star.button_pressed=false
+	pigeon.button_pressed=false
 	
-	
+
+func _on_star_pressed() -> void:
+	$"../../Charm/CharmSprite".texture = load("res://assets/charm.png")
+	pigeon.button_pressed=false
+	custom.button_pressed=false

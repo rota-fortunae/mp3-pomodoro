@@ -116,6 +116,7 @@ offset_top = 85.0
 offset_right = 85.0
 offset_bottom = 107.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "pigeon"
 
 [node name="custom" type="Button" parent="." unique_id=2082088473]
@@ -126,6 +127,7 @@ offset_top = 85.0
 offset_right = 126.0
 offset_bottom = 107.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "new"
 
 [node name="green" type="Button" parent="." unique_id=319060128]
@@ -137,6 +139,7 @@ offset_top = 43.0
 offset_right = 44.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "green"
 text_direction = 1
 
@@ -148,6 +151,7 @@ offset_top = 43.0
 offset_right = 85.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "pink"
 text_direction = 1
 
@@ -159,6 +163,7 @@ offset_top = 43.0
 offset_right = 126.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "amber"
 text_direction = 1
 
@@ -170,6 +175,7 @@ offset_top = 57.0
 offset_right = 44.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "grey"
 text_direction = 1
 
@@ -181,6 +187,7 @@ offset_top = 57.0
 offset_right = 85.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "yellow"
 text_direction = 1
 
@@ -192,6 +199,7 @@ offset_top = 85.0
 offset_right = 44.0
 offset_bottom = 107.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "star"
 
 [node name="blue" type="Button" parent="." unique_id=609336276]
@@ -202,6 +210,7 @@ offset_top = 57.0
 offset_right = 126.0
 offset_bottom = 69.0
 theme = ExtResource("1_8pph3")
+toggle_mode = true
 text = "blue"
 text_direction = 1
 
@@ -230,18 +239,56 @@ scale = Vector2(0.1, 0.1)
 
 [node name="customTheme" type="Node" parent="." unique_id=1160327925]
 
-[node name="Button" type="Button" parent="customTheme" unique_id=819493891]
-offset_left = 73.0
-offset_top = 73.0
-offset_right = 81.0
-offset_bottom = 81.0
+[node name="buttonOne" type="Button" parent="customTheme" unique_id=819493891]
+custom_maximum_size = Vector2(4, 6)
+offset_left = 74.0
+offset_top = 74.0
+offset_right = 78.0
+offset_bottom = 80.0
+
+[node name="ColorRect" type="ColorRect" parent="customTheme/buttonOne" unique_id=82811507]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 6.0
+color = Color(0.95686275, 0.76862746, 0.8392157, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="customTheme" unique_id=1669676417]
+offset_left = 83.0
+offset_top = 74.0
+offset_right = 87.0
+offset_bottom = 80.0
+color = Color(0.87058824, 0.6745098, 0.78431374, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="customTheme" unique_id=727517287]
+offset_left = 92.0
+offset_top = 74.0
+offset_right = 96.0
+offset_bottom = 80.0
+color = Color(0.76862746, 0.58431375, 0.75686276, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="customTheme" unique_id=840654528]
+offset_left = 101.0
+offset_top = 74.0
+offset_right = 105.0
+offset_bottom = 80.0
+color = Color(0.64705884, 0.49803922, 0.6784314, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="customTheme" unique_id=1464796210]
+offset_left = 110.0
+offset_top = 74.0
+offset_right = 114.0
+offset_bottom = 80.0
+color = Color(0.50980395, 0.41568628, 0.58431375, 1)
 
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="pigeon" to="." method="_on_pigeon_pressed"]
+[connection signal="pressed" from="custom" to="." method="_on_custom_pressed"]
 [connection signal="pressed" from="green" to="." method="_on_green_pressed"]
 [connection signal="pressed" from="pink" to="." method="_on_pink_pressed"]
 [connection signal="pressed" from="red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="black" to="." method="_on_black_pressed"]
 [connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]
