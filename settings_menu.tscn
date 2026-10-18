@@ -51,8 +51,8 @@ script = ExtResource("2_ajx48")
 [node name="background" type="TextureRect" parent="." unique_id=1596246548]
 use_parent_material = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 140.0
+offset_bottom = 115.0
 theme = ExtResource("1_8pph3")
 texture = ExtResource("1_2d6lb")
 

@@ -4,3 +4,4 @@ res://main.gdshader
 res://settings_menu_script.gd
 res://main.tscn
 res://scuff.tscn
+res://export_presets.cfg

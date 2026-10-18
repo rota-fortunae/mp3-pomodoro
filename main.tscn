@@ -33,7 +33,7 @@ radius = 33.007843
 height = 66.015686
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j343n"]
-size = Vector2(98, 3)
+size = Vector2(99, 30.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_clock"]
 shader = ExtResource("11_clock")
@@ -153,7 +153,7 @@ target_path = NodePath(".")
 [node name="CharmSprite" type="Sprite2D" parent="Cap/Charm" unique_id=586687799]
 z_index = 1
 material = ExtResource("3_vivmo")
-position = Vector2(37.000004, -13.000002)
+position = Vector2(36.686943, -12.925491)
 rotation = -0.65927607
 texture = ExtResource("6_074og")
 
@@ -190,7 +190,7 @@ position = Vector2(164, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cap/SwingBoundary" unique_id=810342164]
 material = ExtResource("3_vivmo")
-position = Vector2(43, 30)
+position = Vector2(43, 16)
 shape = SubResource("RectangleShape2D_j343n")
 
 [node name="settingsButton" type="TextureButton" parent="Cap" unique_id=1418566529]

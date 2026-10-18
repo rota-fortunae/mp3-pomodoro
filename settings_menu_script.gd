@@ -87,6 +87,9 @@ func _on_settings_button_pressed() -> void:
 	yellow.visible=true
 	blue.visible=true
 	$audioSlider.visible = true
+	$customTheme.visible = true
+	
+	
 	credits.visible=false
 	credits_button.button_pressed = false
 	pigeon.visible=true
@@ -105,6 +108,8 @@ func _on_credits_button_pressed() -> void:
 	pigeon.visible=false
 	star.visible=false
 	custom.visible=false
+	
+	$customTheme.visible=false
 	
 	
 	credits.visible=true
