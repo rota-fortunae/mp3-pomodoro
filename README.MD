@@ -11,7 +11,6 @@ Currently, this only has a working build for mac and windows. I'm planning on ma
  - Add music
  - Add sfx
  - Add custom themes
- - Add custom charms (?)
  - Fix play button not displaying secondary state 
 
 ## Authors
