@@ -18,7 +18,7 @@ extends Control
 @onready var star: Button = $star
 @onready var custom: Button = $custom
 
-var colorbuttonlis = [green, pink, red, black, yellow, blue]
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -47,25 +47,36 @@ func change_color(newcolorstring):
 		var new_color = Color(newcolorlist[i])
 		RenderingServer.global_shader_parameter_set(names[i], new_color)
 
+func fix_other_buttons(currentButton: Button) -> void:
+	var colorbuttonlis = [green, pink, red, black, yellow, blue]
+	for i in colorbuttonlis: 
+		if i != currentButton:
+			i.button_pressed=false
+
 func _on_green_pressed() -> void:
 	change_color("#0d0d0d,#003333,#0b6648,#439960,#89cc89,#eeffe6")
+	fix_other_buttons(green)
 
 func _on_pink_pressed() -> void:
+	fix_other_buttons(pink)
 	change_color("#61567d,#826a95,#a57fad,#c495bf,#dcacc9,#f4c4d4")
 
 func _on_red_pressed() -> void:
+	fix_other_buttons(red)
 	change_color("#3a0000,#590000,#7c0300,#c02b18,#e04217,#f26d1f")
 	
 func _on_black_pressed() -> void:
+	fix_other_buttons(black)
 	change_color("#5E5E5E, #767676, #8F8F8F, #A8A8A8,#BEBEBE,#D4D4D4")
 
 func _on_yellow_pressed() -> void:
+	fix_other_buttons(yellow)
 	change_color("#0e0705, #34140e, #653019, #ce812c, #e3ba66, #e7d99c")
 
 func _on_blue_pressed() -> void:
+	fix_other_buttons(blue)
 	change_color("#2a173b,#3f2c5f,#443f7b,#4c5c87,#69809e,#95c5ac")
 	
- 
 func _on_settings_button_pressed() -> void:
 	settings.visible=true
 	exit_button.visible=true
@@ -144,7 +155,7 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	
 	customCharm.texture=charmTextu
 	
-	customCharm.scale=Vector2(35.0/charmTextu.get_height(), 35.0/charmTextu.get_height())
+	customCharm.scale=Vector2(30.0/charmTextu.get_height(), 30.0/charmTextu.get_height())
 	#$"../../Charm/CharmSprite".visible=true
 	customCharm.visible=true
 	
