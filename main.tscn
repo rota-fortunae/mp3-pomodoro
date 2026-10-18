@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7mw4quokacc" path="res://assets/button_pressed.png" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://nxwgn6svru8q" path="res://charm_swing.gd" id="5_272bh"]
 [ext_resource type="BitMap" uid="uid://bt0ois64521xf" path="res://assets/button_bitmap.png" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bjm3qdtqussm7" path="res://assets/charm.png" id="6_074og"]
+[ext_resource type="Texture2D" uid="uid://c05l6pu01fq4y" path="res://assets/blank_charm.png" id="6_cegan"]
 [ext_resource type="BitMap" uid="uid://dwl5ec7jpd6w5" path="res://assets/cap_bitmask.png" id="6_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cyw7ljijy0wpu" path="res://assets/blank_imagecharm.png" id="7_cegan"]
 [ext_resource type="FontFile" uid="uid://obww1jk45dny" path="res://assets/digital-7 (mono).ttf" id="8_5vw27"]
@@ -155,10 +155,10 @@ z_index = 1
 material = ExtResource("3_vivmo")
 position = Vector2(37.000004, -13.000002)
 rotation = -0.65927607
-texture = ExtResource("6_074og")
+texture = ExtResource("6_cegan")
 
 [node name="CustomCharm" type="Sprite2D" parent="Cap/Charm/CharmSprite" unique_id=403916242]
-position = Vector2(0.43022797, 39.873096)
+position = Vector2(0.45097005, 36.873165)
 texture = ExtResource("7_cegan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cap/Charm" unique_id=978954045]
