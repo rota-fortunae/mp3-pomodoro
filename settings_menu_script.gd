@@ -134,6 +134,11 @@ func _on_star_pressed() -> void:
 
 func _on_file_dialog_file_selected(path: String) -> void:
 	print(path)
-	print(DirAccess.copy_absolute(path,"res://assets/user_input_charm."+path.get_extension()))
-	$"../../Charm/CharmSprite/CustomCharm".texture=Image.load_from_file("res://assets/user_input_charm."+path.get_extension())
+	var customCharm: Sprite2D= $"../../Charm/CharmSprite/CustomCharm"
+	#print(DirAccess.copy_absolute(path,"res://assets/user_input_charm."+path.get_extension()))
+	customCharm.texture=load(path)
+	var charmTextu = load(path)
+	customCharm.scale=Vector2(22/charmTextu.get_width(), 22/charmTextu.get_height())
+	#$"../../Charm/CharmSprite".visible=true
+	customCharm.visible=true
 	

@@ -313,7 +313,7 @@ initial_position = 1
 file_mode = 0
 display_mode = 1
 access = 2
-filters = PackedStringArray("*.png", "*.jpg", "*.jpeg", "*.gif")
+filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
