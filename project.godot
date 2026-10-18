@@ -27,6 +27,7 @@ window/size/window_height_override=640
 window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/per_pixel_transparency/allowed=true
+window/main_scene=""
 
 [editor_plugins]
 

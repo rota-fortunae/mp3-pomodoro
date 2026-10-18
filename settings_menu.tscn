@@ -21,7 +21,7 @@ shader = ExtResource("15_mwvxn")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_56ip2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cegan"]
 shader = ExtResource("15_mwvxn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3877l"]
@@ -35,6 +35,12 @@ bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8lcu"]
 bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mwvxn"]
+shader = ExtResource("15_mwvxn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56ip2"]
+shader = ExtResource("15_mwvxn")
 
 [node name="SettingsMenu" type="Control" unique_id=948723413]
 material = SubResource("ShaderMaterial_0tp7r")
@@ -109,6 +115,7 @@ texture_normal = ExtResource("10_8pph3")
 texture_click_mask = ExtResource("11_exc7q")
 
 [node name="pigeon" type="Button" parent="." unique_id=259782362]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 47.0
@@ -120,6 +127,7 @@ toggle_mode = true
 text = "pigeon"
 
 [node name="custom" type="Button" parent="." unique_id=2082088473]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(38, 12)
 layout_mode = 0
 offset_left = 88.0
@@ -131,7 +139,7 @@ toggle_mode = true
 text = "new"
 
 [node name="green" type="Button" parent="." unique_id=319060128]
-material = SubResource("ShaderMaterial_56ip2")
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 6.0
@@ -144,6 +152,7 @@ text = "green"
 text_direction = 1
 
 [node name="pink" type="Button" parent="." unique_id=1082760081]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 47.0
@@ -156,6 +165,7 @@ text = "pink"
 text_direction = 1
 
 [node name="red" type="Button" parent="." unique_id=1214924962]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 88.0
@@ -168,6 +178,7 @@ text = "amber"
 text_direction = 1
 
 [node name="black" type="Button" parent="." unique_id=1161154831]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 6.0
@@ -180,6 +191,7 @@ text = "grey"
 text_direction = 1
 
 [node name="yellow" type="Button" parent="." unique_id=1498593614]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 47.0
@@ -192,6 +204,7 @@ text = "yellow"
 text_direction = 1
 
 [node name="star" type="Button" parent="." unique_id=106566613]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 6.0
@@ -203,6 +216,7 @@ toggle_mode = true
 text = "star"
 
 [node name="blue" type="Button" parent="." unique_id=609336276]
+material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
 layout_mode = 0
 offset_left = 88.0
@@ -237,22 +251,28 @@ offset_right = 391.0
 offset_bottom = 672.0
 scale = Vector2(0.1, 0.1)
 
-[node name="customTheme" type="Node" parent="." unique_id=1160327925]
+[node name="customTheme" type="Control" parent="." unique_id=1170589445]
+material = SubResource("ShaderMaterial_mwvxn")
+anchors_preset = 0
 
 [node name="buttonOne" type="Button" parent="customTheme" unique_id=819493891]
 custom_maximum_size = Vector2(4, 6)
+layout_mode = 0
 offset_left = 74.0
 offset_top = 74.0
 offset_right = 78.0
 offset_bottom = 80.0
 
 [node name="ColorRect" type="ColorRect" parent="customTheme/buttonOne" unique_id=82811507]
+material = SubResource("ShaderMaterial_56ip2")
 layout_mode = 0
 offset_right = 4.0
 offset_bottom = 6.0
 color = Color(0.95686275, 0.76862746, 0.8392157, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="customTheme" unique_id=1669676417]
+material = SubResource("ShaderMaterial_56ip2")
+layout_mode = 0
 offset_left = 83.0
 offset_top = 74.0
 offset_right = 87.0
@@ -260,6 +280,8 @@ offset_bottom = 80.0
 color = Color(0.87058824, 0.6745098, 0.78431374, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="customTheme" unique_id=727517287]
+material = SubResource("ShaderMaterial_56ip2")
+layout_mode = 0
 offset_left = 92.0
 offset_top = 74.0
 offset_right = 96.0
@@ -267,6 +289,8 @@ offset_bottom = 80.0
 color = Color(0.76862746, 0.58431375, 0.75686276, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="customTheme" unique_id=840654528]
+material = SubResource("ShaderMaterial_56ip2")
+layout_mode = 0
 offset_left = 101.0
 offset_top = 74.0
 offset_right = 105.0
@@ -274,6 +298,8 @@ offset_bottom = 80.0
 color = Color(0.64705884, 0.49803922, 0.6784314, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="customTheme" unique_id=1464796210]
+material = SubResource("ShaderMaterial_56ip2")
+layout_mode = 0
 offset_left = 110.0
 offset_top = 74.0
 offset_right = 114.0
@@ -286,6 +312,7 @@ title = "Open a File"
 initial_position = 1
 file_mode = 0
 display_mode = 1
+access = 2
 filters = PackedStringArray("*.png", "*.jpg", "*.jpeg", "*.gif")
 
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
@@ -300,4 +327,4 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg", "*.gif")
 [connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
 [connection signal="pressed" from="star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]
-[connection signal="confirmed" from="FileDialog" to="." method="_on_file_dialog_confirmed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
