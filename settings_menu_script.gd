@@ -102,23 +102,31 @@ func _on_credits_button_pressed() -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	
 	$"../../Charm/CharmSprite".visible = true
 	$"../../Cap".visible = true 
 	visible = false
-
+	
 
 func _on_pigeon_pressed() -> void:
 	$"../../Charm/CharmSprite".texture = load("res://assets/pigeon_charm.png")
+	$"../../Charm/CharmSprite/CustomCharm".texture=load("res://assets/blank_imagecharm.png")
 	star.button_pressed=false
 	custom.button_pressed=false
-
+	pigeon.button_pressed=true
+	
 func _on_custom_pressed() -> void:
-	#ADD FUNCTIONALITY LATERRRRR
+	$"../../Charm/CharmSprite".texture = load("res://assets/blank_charm.png")
+	$FileDialog.visible=true #rest in file dialogue thing
+	
+	custom.button_pressed=true
 	star.button_pressed=false
 	pigeon.button_pressed=false
 	
-
+	
 func _on_star_pressed() -> void:
 	$"../../Charm/CharmSprite".texture = load("res://assets/charm.png")
+	$"../../Charm/CharmSprite/CustomCharm".texture=load("res://assets/blank_imagecharm.png")
 	pigeon.button_pressed=false
 	custom.button_pressed=false
+	star.button_pressed=true

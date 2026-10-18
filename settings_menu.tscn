@@ -280,6 +280,14 @@ offset_right = 114.0
 offset_bottom = 80.0
 color = Color(0.50980395, 0.41568628, 0.58431375, 1)
 
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1184996002]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 1
+file_mode = 0
+display_mode = 1
+filters = PackedStringArray("*.png", "*.jpg", "*.jpeg", "*.gif")
+
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
@@ -292,3 +300,4 @@ color = Color(0.50980395, 0.41568628, 0.58431375, 1)
 [connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
 [connection signal="pressed" from="star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]
+[connection signal="confirmed" from="FileDialog" to="." method="_on_file_dialog_confirmed"]
