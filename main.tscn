@@ -233,6 +233,7 @@ sprite_frames = SubResource("SpriteFrames_ip871")
 animation = &"pause"
 
 [node name="TimerButton" type="TextureButton" parent="." unique_id=645797071]
+z_index = 1
 material = ExtResource("3_vivmo")
 offset_left = 18.0
 offset_top = 24.0
