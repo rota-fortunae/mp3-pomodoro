@@ -223,6 +223,9 @@ text = "30:00"
 
 [node name="Timer" type="Timer" parent="." unique_id=1686455308]
 script = ExtResource("9_pom")
+work_minutes = 1
+break_minutes = 1
+debug = false
 
 [node name="BreakIndicator" type="AnimatedSprite2D" parent="." unique_id=1957707449]
 z_index = 1

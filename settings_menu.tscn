@@ -14,9 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://ynlfgmofqms" path="res://assets/exit_button.png" id="10_8pph3"]
 [ext_resource type="BitMap" uid="uid://csakl3vshxmu8" path="res://assets/exit_alpha.png" id="11_exc7q"]
 [ext_resource type="Shader" uid="uid://r5kh3gkgy0gg" path="res://main.gdshader" id="15_mwvxn"]
+[ext_resource type="Script" uid="uid://co6qwe57mviob" path="res://custom_colors.gd" id="16_0tp7r"]
 [ext_resource type="Texture2D" uid="uid://4p8636ld16k7" path="res://assets/knob.png" id="16_mwvxn"]
+[ext_resource type="Texture2D" uid="uid://baiqdv6e4ucqg" path="res://assets/colorPickerBackground.png" id="17_0tp7r"]
+[ext_resource type="StyleBox" uid="uid://derieksoqxsca" path="res://assets/transparent_theme.tres" id="17_i8lcu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0tp7r"]
+shader = ExtResource("15_mwvxn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4b38l"]
 shader = ExtResource("15_mwvxn")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ip871"]
@@ -40,6 +46,9 @@ bg_color = Color(0.64705884, 0.49411765, 0.6784314, 1)
 shader = ExtResource("15_mwvxn")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_56ip2"]
+shader = ExtResource("15_mwvxn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i8lcu"]
 shader = ExtResource("15_mwvxn")
 
 [node name="SettingsMenu" type="Control" unique_id=948723413]
@@ -66,12 +75,48 @@ theme = ExtResource("1_8pph3")
 texture = ExtResource("2_nxj4t")
 
 [node name="settings" type="TextureRect" parent="." unique_id=2108530980]
+material = SubResource("ShaderMaterial_4b38l")
 use_parent_material = true
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 115.0
 theme = ExtResource("1_8pph3")
 texture = ExtResource("3_ttjgw")
+
+[node name="fiftyten" type="Button" parent="settings" unique_id=776832687]
+use_parent_material = true
+custom_minimum_size = Vector2(38, 12)
+custom_maximum_size = Vector2(38, 12)
+layout_mode = 0
+offset_left = 47.0
+offset_top = 99.0
+offset_right = 79.0
+offset_bottom = 112.0
+toggle_mode = true
+text = "50:10"
+
+[node name="twentyfivefive" type="Button" parent="settings" unique_id=1151281358]
+use_parent_material = true
+custom_maximum_size = Vector2(45, 12)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 99.0
+offset_right = 44.0
+offset_bottom = 112.0
+toggle_mode = true
+button_pressed = true
+text = "25:5"
+
+[node name="thirdsrule" type="Button" parent="settings" unique_id=1100041042]
+use_parent_material = true
+custom_maximum_size = Vector2(45, 12)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 99.0
+offset_right = 127.0
+offset_bottom = 111.0
+toggle_mode = true
+text = "52:17"
 
 [node name="creditsButton" type="TextureButton" parent="." unique_id=1208418462]
 use_parent_material = true
@@ -98,6 +143,7 @@ offset_right = 62.0
 offset_bottom = 29.0
 theme = ExtResource("1_8pph3")
 toggle_mode = true
+button_pressed = true
 texture_normal = ExtResource("6_exc7q")
 texture_pressed = ExtResource("7_ajx48")
 texture_hover = ExtResource("7_ajx48")
@@ -138,6 +184,19 @@ theme = ExtResource("1_8pph3")
 toggle_mode = true
 text = "new"
 
+[node name="star" type="Button" parent="." unique_id=106566613]
+material = SubResource("ShaderMaterial_cegan")
+custom_maximum_size = Vector2(-1, 12)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 85.0
+offset_right = 44.0
+offset_bottom = 97.0
+theme = ExtResource("1_8pph3")
+toggle_mode = true
+button_pressed = true
+text = "star"
+
 [node name="green" type="Button" parent="." unique_id=319060128]
 material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
@@ -161,6 +220,7 @@ offset_right = 85.0
 offset_bottom = 55.0
 theme = ExtResource("1_8pph3")
 toggle_mode = true
+button_pressed = true
 text = "pink"
 text_direction = 1
 
@@ -203,18 +263,6 @@ toggle_mode = true
 text = "yellow"
 text_direction = 1
 
-[node name="star" type="Button" parent="." unique_id=106566613]
-material = SubResource("ShaderMaterial_cegan")
-custom_maximum_size = Vector2(-1, 12)
-layout_mode = 0
-offset_left = 6.0
-offset_top = 85.0
-offset_right = 44.0
-offset_bottom = 107.0
-theme = ExtResource("1_8pph3")
-toggle_mode = true
-text = "star"
-
 [node name="blue" type="Button" parent="." unique_id=609336276]
 material = SubResource("ShaderMaterial_cegan")
 custom_maximum_size = Vector2(-1, 12)
@@ -242,32 +290,18 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_3877l")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_0tp7r")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_i8lcu")
 
-[node name="colorPicker" type="ColorPicker" parent="." unique_id=1413895846]
-visible = false
-layout_mode = 0
-offset_left = 90.99999
-offset_top = 37.999996
-offset_right = 391.0
-offset_bottom = 672.0
-scale = Vector2(0.1, 0.1)
-
 [node name="customTheme" type="Control" parent="." unique_id=1170589445]
 material = SubResource("ShaderMaterial_mwvxn")
 anchors_preset = 0
+script = ExtResource("16_0tp7r")
 
-[node name="buttonOne" type="Button" parent="customTheme" unique_id=819493891]
-custom_maximum_size = Vector2(4, 6)
+[node name="ColorRect" type="ColorRect" parent="customTheme" unique_id=82811507]
+material = SubResource("ShaderMaterial_56ip2")
 layout_mode = 0
 offset_left = 74.0
 offset_top = 74.0
 offset_right = 78.0
 offset_bottom = 80.0
-
-[node name="ColorRect" type="ColorRect" parent="customTheme/buttonOne" unique_id=82811507]
-material = SubResource("ShaderMaterial_56ip2")
-layout_mode = 0
-offset_right = 4.0
-offset_bottom = 6.0
 color = Color(0.95686275, 0.76862746, 0.8392157, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="customTheme" unique_id=1669676417]
@@ -306,25 +340,133 @@ offset_right = 114.0
 offset_bottom = 80.0
 color = Color(0.50980395, 0.41568628, 0.58431375, 1)
 
+[node name="buttonOne" type="Button" parent="customTheme" unique_id=819493891]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 73.0
+offset_top = 73.0
+offset_right = 79.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="buttonTwo" type="Button" parent="customTheme" unique_id=2088397376]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 82.0
+offset_top = 73.0
+offset_right = 88.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="buttonThree" type="Button" parent="customTheme" unique_id=95845189]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 91.0
+offset_top = 73.0
+offset_right = 97.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="buttonFour" type="Button" parent="customTheme" unique_id=751292013]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 73.0
+offset_right = 106.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="buttonFive" type="Button" parent="customTheme" unique_id=399998248]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 109.0
+offset_top = 73.0
+offset_right = 115.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="buttonSix" type="Button" parent="customTheme" unique_id=397228959]
+custom_maximum_size = Vector2(6, 8)
+layout_mode = 0
+offset_left = 118.0
+offset_top = 73.0
+offset_right = 124.0
+offset_bottom = 81.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
+[node name="colorPicker" type="Sprite2D" parent="customTheme" unique_id=335650331]
+visible = false
+material = SubResource("ShaderMaterial_i8lcu")
+position = Vector2(113, 40)
+texture = ExtResource("17_0tp7r")
+
+[node name="picker" type="ColorPicker" parent="customTheme/colorPicker" unique_id=1413895846]
+offset_left = -48.0
+offset_top = -51.0
+offset_right = 252.0
+offset_bottom = 583.0
+scale = Vector2(0.3, 0.3)
+color = Color(0.38039216, 0.3372549, 0.49019608, 1)
+edit_alpha = false
+edit_intensity = false
+can_add_swatches = false
+color_modes_visible = false
+sliders_visible = false
+presets_visible = false
+
+[node name="exitColorPicker" type="Button" parent="customTheme/colorPicker" unique_id=697281147]
+offset_left = 42.0
+offset_top = -67.0
+offset_right = 53.0
+offset_bottom = -56.0
+theme_override_styles/normal = ExtResource("17_i8lcu")
+theme_override_styles/pressed = ExtResource("17_i8lcu")
+theme_override_styles/hover = ExtResource("17_i8lcu")
+
 [node name="FileDialog" type="FileDialog" parent="." unique_id=1184996002]
 oversampling_override = 1.0
 title = "Open a File"
 initial_position = 1
+size = Vector2i(1081, 369)
 file_mode = 0
 display_mode = 1
 access = 2
 filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 
+[connection signal="pressed" from="settings/fiftyten" to="." method="_on_fiftyten_pressed"]
+[connection signal="pressed" from="settings/twentyfivefive" to="." method="_on_twentyfivefive_pressed"]
+[connection signal="pressed" from="settings/thirdsrule" to="." method="_on_thirdsrule_pressed"]
+[connection signal="toggled" from="settings/thirdsrule" to="." method="_on_thirdsrule_toggled"]
 [connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="pigeon" to="." method="_on_pigeon_pressed"]
 [connection signal="pressed" from="custom" to="." method="_on_custom_pressed"]
+[connection signal="pressed" from="star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="green" to="." method="_on_green_pressed"]
 [connection signal="pressed" from="pink" to="." method="_on_pink_pressed"]
 [connection signal="pressed" from="red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="black" to="." method="_on_black_pressed"]
 [connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
-[connection signal="pressed" from="star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="customTheme/buttonOne" to="customTheme" method="_on_button_one_pressed"]
+[connection signal="pressed" from="customTheme/buttonTwo" to="customTheme" method="_on_button_two_pressed"]
+[connection signal="pressed" from="customTheme/buttonThree" to="customTheme" method="_on_button_three_pressed"]
+[connection signal="pressed" from="customTheme/buttonFour" to="customTheme" method="_on_button_four_pressed"]
+[connection signal="pressed" from="customTheme/buttonFive" to="customTheme" method="_on_button_five_pressed"]
+[connection signal="pressed" from="customTheme/buttonSix" to="customTheme" method="_on_button_six_pressed"]
+[connection signal="color_changed" from="customTheme/colorPicker/picker" to="customTheme" method="_on_color_picker_color_changed"]
+[connection signal="pressed" from="customTheme/colorPicker/exitColorPicker" to="customTheme" method="_on_exit_color_picker_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

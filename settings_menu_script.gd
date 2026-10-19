@@ -164,3 +164,26 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	#$"../../Charm/CharmSprite".visible=true
 	customCharm.visible=true
 	
+
+
+func _on_fiftyten_pressed() -> void:
+	$settings/fiftyten.button_pressed=true
+	$settings/twentyfivefive.button_pressed=false
+	$settings/thirdsrule.button_pressed=false
+	$"../../../Timer".work_minutes=50
+	$"../../../Timer".break_minutes=10
+	
+
+func _on_twentyfivefive_pressed() -> void:
+	$settings/fiftyten.button_pressed=false
+	$settings/twentyfivefive.button_pressed=true
+	$settings/thirdsrule.button_pressed=false
+	$"../../../Timer".work_minutes=25
+	$"../../../Timer".break_minutes=5
+
+func _on_thirdsrule_pressed() -> void:
+	$settings/fiftyten.button_pressed=false
+	$settings/twentyfivefive.button_pressed=false
+	$settings/thirdsrule.button_pressed=true
+	$"../../../Timer".work_minutes=52
+	$"../../../Timer".break_minutes=17
